@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="FHLook.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+</head>
+
+<header>
+    <div class="topnav">
+        <a href="indexFH.html">Home</a>
+        <a href="booking.html">Bookings</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </div>
+</header>
+<body>
+    <div class="logo">
+        <img src="Flying hands logo.png" >
+    </div>
+    <h3>A convinient and futuristic way to learn how to FIGHT!</h3>
+    <div id="banner">
+        <img v-on:mouseover="Vid" v-show="bannerImg" src="banner image.jpeg" width="100%" height="570">
+        <video width="100%" height="570" autoplay>
+            <source src="boxing_video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="app">
+        <h1> Fighting styles offered</h1>
+        <div id="fightstyles">
+            <h2 v-on:mouseover='box' >B o x i n g</h2>
+            <h2 v-on:mouseover='wrestle'>W r e s t l i n g</h2>
+            <h2 v-on:mouseover='muay'>M u a y - T h a i </h2>
+            <h2 v-on:mouseover='kick'>K i c k   B o x i n g</h2>
+        </div>
+        <div id="fightStyleImg">
+            <a href="booking.html">
+                <img v-show="boximg" src="boxing logo.png">
+                <img v-show="kickimg" src="kickboxing logo.png">
+                <img v-show="muayimg" src="muay thai logo.png">
+                <img v-show="wrestlingimg" src="wrestling logo.png">
+            </a>
+            </div>
+    </div>
+    <script src="FlyingHandsVue.js"></script>
+</body>
+</html>
